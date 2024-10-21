@@ -1,6 +1,8 @@
-# GaussChat —— OpenGauss-LLM-MultiUser-Chat-Platform
+# GaussChat
 
 **中山大学 2024 年数据库实验大作业**：基于 openGauss 实现的 LLM 多用户交互平台，构建一个支持多用户、具有对话历史管理功能的 LLM 交互平台，用户可选择不同的模型配置进行交互，平台提供可视化界面。
+
+GaussChat —— OpenGauss-LLM-MultiUser-Chat-Platform
 
 - 组长：许睿林
 - 组员：傅小桐、戴俊腾
