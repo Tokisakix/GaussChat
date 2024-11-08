@@ -15,13 +15,42 @@ GaussChat —— OpenGauss-LLM-MultiUser-Chat-Platform
 
 首先请您根据 `front/.sample-env` 创建 `front/.env` 文件。
 
-```
+```bash
 cd front/
 npm install
 npm run dev
 ```
 
 这将启动 Vite 开发服务器，默认情况下，您应该能够通过 `http://localhost:5173` 访问前端。
+
+### 后端
+
+首先准备 Python Django 运行环境
+
+```bash
+cd backend
+pip install -r requiremens.txt
+```
+
+接着初始化后端数据库
+
+```bash
+python manage.py migrate
+```
+
+创建一个管理员账号
+
+```bash
+python manage.py createsuperuser
+```
+
+最后运行 Django 服务器
+
+```sh
+poetry run python manage.py runserver
+```
+
+这将启动 Django 开发服务器，默认情况下可以通过 `http://localhost:8000/admin` 访问后端管理员面板。
 
 ## 仓库架构
 
@@ -58,15 +87,15 @@ GaussChat
     - [ ] 实现 Python 调用
     - [ ] 【可选】改用分布式存储架构，若做成，全班闻名
 - 后端层
-    - [ ] 前后端接口设计
-    - [ ] 实现 LLM 调用
+    - [x] 前后端接口设计
+    - [x] 实现 LLM 调用
     - [ ] 实现数据库业务
-    - [ ] 实现后端接口
+    - [x] 实现后端接口
 - 前端层
-    - [ ] 页面设计
-    - [ ] 实现静态页面渲染
-    - [ ] 实现动态信息渲染
-    - [ ] 实现前端接口
+    - [x] 页面设计
+    - [x] 实现静态页面渲染
+    - [x] 实现动态信息渲染
+    - [x] 实现前端接口
 - LLM
     - [x] 本地部署
 
