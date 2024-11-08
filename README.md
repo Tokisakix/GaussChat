@@ -9,6 +9,20 @@ GaussChat —— OpenGauss-LLM-MultiUser-Chat-Platform
 
 ![img](assert/GaussChat.png)
 
+## 如何运行
+
+### 前端
+
+首先请您根据 `front/.sample-env` 创建 `front/.env` 文件。
+
+```
+cd front/
+npm install
+npm run dev
+```
+
+这将启动 Vite 开发服务器，默认情况下，您应该能够通过 `http://localhost:5173` 访问前端。
+
 ## 仓库架构
 
 ```Tree
