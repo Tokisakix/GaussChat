@@ -11,43 +11,36 @@ GaussChat —— OpenGauss-LLM-MultiUser-Chat-Platform
 
 ## 如何运行
 
-### 前端
+### Docker 启动
 
-首先请您根据 `front/.sample-env` 创建 `front/.env` 文件。
+使用下方命令，可以通过 `docker-compose` 一键部署前后端服务器。
 
 ```bash
-cd front/
-npm install
-npm run dev
+docker compose up --build
+```
+
+### 命令行启动
+
+首先请您初始化前后端运行环境
+
+```bash
+make init
+```
+
+然后请您根据 `front/.sample-env` 和 `app/.sample-env` 分别创建 `front/.env`、`app/.env` 文件。
+
+运行前端服务器
+
+```bash
+make web
 ```
 
 这将启动 Vite 开发服务器，默认情况下，您应该能够通过 `http://localhost:5173` 访问前端。
 
-### 后端
-
-首先准备 Python Django 运行环境
-
-```bash
-cd backend
-pip install -r requiremens.txt
-```
-
-接着初始化后端数据库
-
-```bash
-python manage.py migrate
-```
-
-创建一个管理员账号
-
-```bash
-python manage.py createsuperuser
-```
-
-最后运行 Django 服务器
+最后运行 Django 后端服务器
 
 ```sh
-poetry run python manage.py runserver
+make app
 ```
 
 这将启动 Django 开发服务器，默认情况下可以通过 `http://localhost:8000/admin` 访问后端管理员面板。
@@ -83,13 +76,13 @@ GaussChat
 
 - 数据层
     - [x] 本地部署
-    - [ ] 数据库设计
-    - [ ] 实现 Python 调用
+    - [x] 数据库设计
+    - [x] 实现 Python 调用
     - [ ] 【可选】改用分布式存储架构，若做成，全班闻名
 - 后端层
     - [x] 前后端接口设计
     - [x] 实现 LLM 调用
-    - [ ] 实现数据库业务
+    - [x] 实现数据库业务
     - [x] 实现后端接口
 - 前端层
     - [x] 页面设计

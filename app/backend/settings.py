@@ -87,6 +87,16 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django_opengauss_backend',
+#         'NAME': 'GaussChat',
+#         'USER': 'gaussdb',
+#         'PASSWORD': 'Db@00001',
+#         'HOST': '127.0.0.1',
+#         'PORT': 15432,
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
