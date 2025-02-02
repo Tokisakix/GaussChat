@@ -9,6 +9,42 @@ GaussChat —— OpenGauss-LLM-MultiUser-Chat-Platform
 
 ![img](assert/GaussChat.png)
 
+## 如何运行
+
+### Docker 启动
+
+使用下方命令，可以通过 `docker-compose` 一键部署前后端服务器。
+
+```bash
+docker compose up --build
+```
+
+### 命令行启动
+
+首先请您初始化前后端运行环境
+
+```bash
+make init
+```
+
+然后请您根据 `front/.sample-env` 和 `app/.sample-env` 分别创建 `front/.env`、`app/.env` 文件。
+
+运行前端服务器
+
+```bash
+make web
+```
+
+这将启动 Vite 开发服务器，默认情况下，您应该能够通过 `http://localhost:5173` 访问前端。
+
+最后运行 Django 后端服务器
+
+```sh
+make app
+```
+
+这将启动 Django 开发服务器，默认情况下可以通过 `http://localhost:8000/admin` 访问后端管理员面板。
+
 ## 仓库架构
 
 ```Tree
@@ -40,19 +76,19 @@ GaussChat
 
 - 数据层
     - [x] 本地部署
-    - [ ] 数据库设计
-    - [ ] 实现 Python 调用
+    - [x] 数据库设计
+    - [x] 实现 Python 调用
     - [ ] 【可选】改用分布式存储架构，若做成，全班闻名
 - 后端层
-    - [ ] 前后端接口设计
-    - [ ] 实现 LLM 调用
-    - [ ] 实现数据库业务
-    - [ ] 实现后端接口
+    - [x] 前后端接口设计
+    - [x] 实现 LLM 调用
+    - [x] 实现数据库业务
+    - [x] 实现后端接口
 - 前端层
-    - [ ] 页面设计
-    - [ ] 实现静态页面渲染
-    - [ ] 实现动态信息渲染
-    - [ ] 实现前端接口
+    - [x] 页面设计
+    - [x] 实现静态页面渲染
+    - [x] 实现动态信息渲染
+    - [x] 实现前端接口
 - LLM
     - [x] 本地部署
 
